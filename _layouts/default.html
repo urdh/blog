@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>{{ page.title }}</title>
+    <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->  
+	</head>
+	<body>
+    <header>
+      <h1>{{ site.title }}</h1>
+      <a href="/">Home</a>
+    </header>
+    {{ content }}
+    <footer>
+      <p>{{ site.author.name }} — {{ site.author.email }}</p>
+      <p>
+        <a href="http://github.com/urdh/">github</a>,
+        <a href="http://facebook.com/sigurdhsson/">facebook</a>,
+        <a href="{{ site.feed }}">rss</a>
+      </p>
+    </footer>
+  </body>
+</html>

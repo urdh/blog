@@ -1,0 +1,13 @@
+name: 'Simon Sigurdhsson'
+url: http://urdh.github.com/
+feed: http://urdh.github.com/atom.xml
+author:
+  name: 'Simon Sigurdhsson'
+  email: 'Sigurdhsson@gmail.com'
+
+future: false
+permalink: :year/:month/:title
+
+markdown: rdiscount
+pygments: true
+rdiscount extensions: ['smart','filter_styles']
