@@ -25,19 +25,41 @@ code, kbd, pre, samp {
 /* Actually styling stuff */
 body {
     background: #efefef;
+    color: black;
     padding: 4em 0;
     overflow: auto;
 }
 body>header {
     float: left;
     width: 12em;
-    padding: 1em 2em 1em 1em;
+    padding: 1em 2em 0 1em;
+}
+body>header h1 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.276em;
+    line-height: 1.1755;
+    margin-top: 1.9592em;
+    margin-bottom: 0.3918em;
+    font-weight: 600;
+}
+body>header p {
+    font-family: 'Crimson Text', serif;
+    text-indent: 0;
+    margin: 1.5em 0;
+    text-align: left;
+}
+.post header h1 {
+    font-size: 2.8284em;
+    line-height: 1.0606;
+    margin-top: 0.415em;
+    margin-bottom: 0.5em;
+    font-weight: normal;
 }
 .post header p:first-child {
     font-family: 'Crimson Text', serif;
     font-size: 0.7072em;
     line-height: 2.121;
-    top: 3.5348em;
+    top: 1.5348em;
     position: absolute;
     text-transform: uppercase;
 }
@@ -62,7 +84,7 @@ body>header {
     padding: .7072em 0;
     text-align: center !important;
     font-family: 'Crimson Text', serif;
-    color: #7f7f7f;
+    color: #737373;
 }
 .post div.highlight {
     padding: 0 1em;
@@ -71,11 +93,21 @@ body>header {
 body>footer {
     clear: left;
     width: 12em;
-    padding: 1em 2em 1em 1em;
+    padding: 0 2em 0 1em;
     font-family: 'Crimson Text', serif;
 }
 body>footer p {
     text-indent: 0;
     margin: 1.5em 0;
     text-align: left;
+}
+a {
+    color: #ED9E00;
+    text-decoration: none;
+}
+body>header h1>a {
+    color: black;
+}
+a:hover {
+    color: #FFC550 !important;
 }
