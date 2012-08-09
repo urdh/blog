@@ -1,9 +1,6 @@
+safe: true
 name: 'Simon Sigurdhsson'
 url: http://urdh.github.com/
-feed: http://urdh.github.com/atom.xml
-author:
-  name: 'Simon Sigurdhsson'
-  email: 'Sigurdhsson@gmail.com'
 
 future: false
 permalink: /:categories/:year/:month/:title

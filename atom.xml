@@ -6,15 +6,13 @@ permalink: /atom.xml
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title>{{ site.name }}</title>
     <link href="{{ site.feed }}" rel="self"/>
-    <link href="{{ site.url }}"/>
+    <link href="{{ site.url }}atom.xml"/>
     <updated>{{ site.time | date_to_xmlschema }}</updated>
     <id>{{ site.url }}/</id>
-    {% if site.author.name %}
     <author>
-        <name>{{ site.author.name | xml_escape }}</name>
-    {% if site.author.email %}<email>{{ site.author.email }}</email>{% endif %}
+        <name>Simon Sigurdhsson</name>
+        <email>Sigurdhsson+blog@gmail.com</email>
     </author>
-    {% endif %}
     {% for post in site.posts %}
     <entry>
         <title>{{ post.title | xml_escape }}</title>

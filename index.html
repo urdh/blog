@@ -11,4 +11,7 @@ title: Simon Sigurdhsson
 		<li><span>{{ post.date | date_to_string }}</span> <a href="{{ post.url }}">{{ post.title }}</a></li>
 	{% endfor %}
 	</ul>
+	<footer>
+		<p>{{ site.posts | size }} posts, hosted by <a href="http://github.com/">Github</a>.</p>
+	</footer>
 </article>
