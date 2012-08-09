@@ -6,7 +6,7 @@ author:
   email: 'Sigurdhsson@gmail.com'
 
 future: false
-permalink: :year/:month/:title
+permalink: /:categories/:year/:month/:title
 
 markdown: rdiscount
 pygments: true

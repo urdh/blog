@@ -1,0 +1,46 @@
+/* Normalization from http://git.io/normalize */
+@import url(normalize.css);
+/* Vertical flow, see http://blog.sigurdhsson.org/posts/I-X/on-web-typesetting.html */
+@import url(verticalflow.css);
+/* Webfonts */
+@import url(http://fonts.googleapis.com/css?family=Crimson+Text:600,600italic);
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic,700italic&subset=latin,latin-ext);
+@import url(http://fonts.googleapis.com/css?family=Anonymous+Pro:400,400italic,700,700italic&subset=latin,latin-ext);
+/* Basic font definitions */
+html, button, input, select, textarea {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+h1, h2, h3 {
+    font-family: 'Crimson Text', serif;
+}
+article h1, article h2, article h3 {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+article header h1, article header h2 {
+    font-family: 'Crimson Text', serif;
+}
+code, kbd, pre, samp {
+    font-family: 'Anonymous Pro', monospace, serif;
+}
+/* Actually styling stuff */
+body {
+    background: #efefef;
+    padding: 4em 0;
+}
+body>header {
+    display: table-cell;
+    padding: 1em;
+    width: 12em;
+}
+.post, .index * { text-align: left !important; }
+.post, .index {
+    background: white;
+    display: table-cell;
+    padding: 1em;
+    min-width: 25em;
+    max-width: 33em;
+}
+.post div.highlight {
+    padding: 0 1em;
+    margin: 0 -1em;
+}
