@@ -48,14 +48,14 @@ body>header p {
     margin: 1.5em 0;
     text-align: left;
 }
-.post header h1 {
+article header h1 {
     font-size: 2.8284em;
     line-height: 1.0606;
     margin-top: 0.415em;
     margin-bottom: 0.5em;
     font-weight: normal;
 }
-.post header p:first-child {
+article header p:first-child {
     font-family: 'Crimson Text', serif;
     font-size: 0.7072em;
     line-height: 2.121;
@@ -63,8 +63,8 @@ body>header p {
     position: absolute;
     text-transform: uppercase;
 }
-.post *, .index * { text-align: left !important; }
-.post, .index {
+article * { text-align: left !important; }
+article {
     position: absolute;
     left: 15em;
     background: white;
@@ -72,7 +72,7 @@ body>header p {
     min-width: 25em;
     max-width: 33em;
 }
-.post footer, .index footer {
+article footer {
     display: block;
     height: 6em;
     width: 100%;
@@ -80,7 +80,7 @@ body>header p {
     padding: 0 1em;
     background: #efefef;
 }
-.post footer p, .index footer p {
+article footer p {
     padding: .7072em 0;
     text-align: center !important;
     font-family: 'Crimson Text', serif;
@@ -89,6 +89,24 @@ body>header p {
 .post div.highlight {
     padding: 0 1em;
     margin: 0 -1em;
+}
+.index ul {
+    padding: 0;
+}
+.index ul li {
+    margin-left: 0;
+    display: inline-block;
+    list-style: none;
+    overflow: auto;
+}
+.index ul li time {
+    display: block;
+    height: 100%;
+    width: 7em;
+    float: left;
+    font-family: 'Anonymous Pro', monospace, serif;
+    font-size: .9em;
+    line-height: 1.9;
 }
 body>footer {
     clear: left;
@@ -102,12 +120,18 @@ body>footer p {
     text-align: left;
 }
 a {
-    color: #ED9E00;
+    color: #44C3B2;
     text-decoration: none;
+}
+article>:not(footer) a {
+    color: #C95485;
 }
 body>header h1>a {
     color: black;
 }
 a:hover {
-    color: #FFC550 !important;
+    color: #A4DDCC !important;
+}
+article>:not(footer) a:hover {
+    color: #E29CAF !important;
 }
