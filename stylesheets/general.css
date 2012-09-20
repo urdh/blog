@@ -3,28 +3,23 @@
 /* Vertical flow, see http://blog.sigurdhsson.org/posts/I-X/on-web-typesetting.html */
 @import url(verticalflow.css);
 /* Webfonts */
-@import url(http://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,600,600italic);
-@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic,700italic&subset=latin,latin-ext);
-@import url(http://fonts.googleapis.com/css?family=Anonymous+Pro:400,400italic,700,700italic&subset=latin,latin-ext);
+@import url(http://fonts.googleapis.com/css?family=Lora);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+@import url(http://fonts.googleapis.com/css?family=Anonymous+Pro);
 /* Basic font definitions */
 html, button, input, select, textarea {
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Lora', serif;
 }
-h1, h2, h3 {
-    font-family: 'Crimson Text', serif;
-}
-article h1, article h2, article h3 {
-    font-family: 'Source Sans Pro', sans-serif;
-}
-article header h1, article header h2 {
-    font-family: 'Crimson Text', serif;
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Open Sans', sans-serif;
+    color: #843690;
 }
 code, kbd, pre, samp {
     font-family: 'Anonymous Pro', monospace, serif;
 }
 /* Actually styling stuff */
 body {
-    background: #efefef;
+    background: #fff;
     color: black;
     padding: 4em 0;
     overflow: auto;
@@ -35,7 +30,7 @@ body>header {
     padding: 1em 2em 0 1em;
 }
 body>header h1 {
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 1.276em;
     line-height: 1.1755;
     margin-top: 1.9592em;
@@ -43,7 +38,7 @@ body>header h1 {
     font-weight: 600;
 }
 body>header p {
-    font-family: 'Crimson Text', serif;
+    font-family: 'Open Sans', sans-serif;
     text-indent: 0;
     margin: 1.5em 0;
     text-align: left;
@@ -56,7 +51,7 @@ article header h1 {
     font-weight: normal;
 }
 article header p:first-child {
-    font-family: 'Crimson Text', serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 0.7072em;
     line-height: 2.121;
     top: 1.5348em;
@@ -83,7 +78,7 @@ article footer {
 article footer p {
     padding: .7072em 0;
     text-align: center !important;
-    font-family: 'Crimson Text', serif;
+    font-family: 'Open Sans', sans-serif;
     color: #737373;
 }
 .post div.highlight {
@@ -112,7 +107,10 @@ body>footer {
     clear: left;
     width: 12em;
     padding: 0 2em 0 1em;
-    font-family: 'Crimson Text', serif;
+    font-family: 'Lora', serif;
+    background-color: #D8004D;
+    color: #fff !important;
+    font-weight: 300;
 }
 body>footer p {
     text-indent: 0;
@@ -120,18 +118,18 @@ body>footer p {
     text-align: left;
 }
 a {
-    color: #44C3B2;
+    color: #F8686D;
     text-decoration: none;
 }
 article>:not(footer) a {
-    color: #C95485;
+    color: #27AD72;
 }
 body>header h1>a {
     color: black;
 }
 a:hover {
-    color: #A4DDCC !important;
+    color: #7CCDC2 !important;
 }
 article>:not(footer) a:hover {
-    color: #E29CAF !important;
+    color: #634C3D !important;
 }

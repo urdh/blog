@@ -8,7 +8,8 @@ p {
 	text-align:		justify;
 }
 p+p {
-	text-indent:	4ex;
+	/*text-indent:	4ex;*/
+	margin-top:		1.5em;
 }
 small {
 	font-size:		0.7072em;		/* base - 1 stop */
