@@ -16,9 +16,10 @@
     <div class="anchor">
       <nav id="posts">
         <h1>Recently</h1>
-          <ul>{% for post in site.posts %}
+          <ul>{% for post in site.posts limit:5 %}
             <li>{{ post.linkchat | replace:'<self>',post.url | markdownify }}</li>
-          {% endfor %}<ul>
+          {% endfor %}</ul>
+          <p>You can't comment on these articles; if you've got something to say, write a blog post or send me an email. There is also no official archive; articles are rarely interesting for very long and if they are you'd bookmark them anyway. Old posts will stay online and can be browsed through in the <a href="http://github.com/urdh/urdh.github.com/">Github repository</a> if you're interested.</p>
       </nav>
       <footer>
         <section id="author">

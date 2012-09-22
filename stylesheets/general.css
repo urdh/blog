@@ -46,6 +46,9 @@ article hr {
     border: 0;
     border-top: 1px solid #475345;
 }
+.post+.anchor {
+    margin-top: 4.5em;
+}
 /* Styling the anchor stuff */
 .anchor {
     padding: 1.5em;
