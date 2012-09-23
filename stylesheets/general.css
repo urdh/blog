@@ -109,3 +109,21 @@ body>header>h1>a {
 .index>p {
     visibility: hidden;
 }
+/* Restyling some elements */
+table, table * {
+    border-color: #475345 !important;
+}
+pre {
+    margin: 0.9319em 0;
+    padding: 0.9319em 3.7276ex;
+}
+div.highlight {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+img {
+    padding: .75em;
+    margin: -.75em auto;
+    background-color: rgba(71,83,69,0.25);
+    max-width: 100%;
+}
