@@ -83,16 +83,17 @@ article hr {
     height: 10.5em;
     display: inline-block;
     margin: 0;
+    margin-bottom: .75em;
     padding: 0;
     border-bottom: 1px solid #475345;
-    border-top: 1px solid #475345
+    border-top: 1px solid #475345;
 }
 #author {
     margin-right: 1.8em;
 }
-#author {
+#meta {
     position: relative;
-    top: -1.5em;
+    top: -1.35em;
 }
 /* Styling the header/mast */
 body>header>h1 {
