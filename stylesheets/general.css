@@ -3,12 +3,12 @@
 /* Vertical flow, see http://blog.sigurdhsson.org/posts/I-X/on-web-typesetting.html */
 @import url(verticalflow.css);
 /* Webfonts */
-@import url(http://fonts.googleapis.com/css?family=Lora);
+@import url(http://fonts.googleapis.com/css?family=PT+Serif);
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
 @import url(http://fonts.googleapis.com/css?family=Anonymous+Pro);
 /* Basic font definitions */
 html, button, input, select, textarea {
-    font-family: 'Lora', serif;
+    font-family: 'PT Serif', serif;
 }
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Open Sans', sans-serif;
@@ -18,7 +18,7 @@ code, kbd, pre, samp {
 }
 /* Styling the posts */
 body {
-    background: #E5E0C3;
+    background: #f9f9f9;
     color: #475345;
     padding: 0;
     margin: 0;
@@ -27,11 +27,13 @@ body {
 }
 body>article {
     min-width: 25em;
-    max-width: 33em;
+    max-width: 30em;
     margin: 0 auto;
 }
 body>article a {
-    color: #91815F;
+    color: #627360;
+    border-bottom: 1px dotted;
+    text-decoration: none;
 }
 body>article a:hover {
     color: #D2392B;
@@ -53,18 +55,19 @@ article hr {
 /* Styling the anchor stuff */
 .anchor {
     padding: 1.5em;
-    background: #475345;
-    color: #E5E0C3;
+    color: #262220;
+    background: #e9e9e9;
+    padding-bottom: 4em;
+    border-top: 2em solid #f0f0f0;
 }
 .anchor a {
     /*color: #91815F;*/
     color: inherit;
 }
 .anchor a:hover {
-    color: #F7BC76;
+    color: #D2392B;
 }
 .anchor h1 {
-    /*color: #F7BC76;*/
     /* From verticalflow.css, h3 */
     font-size:      1.276em;    /* base + 2/3 stop */
     line-height:    1.1755;
@@ -76,32 +79,27 @@ article hr {
     list-style: disc;
 }
 #posts, .anchor>footer {
-    width: 32em;
+    min-width: 25em;
+    max-width: 30em;
     margin: 0 auto;
 }
-#author, #meta {
-    width: 15em;
-    height: 10.5em;
-    display: inline-block;
-    margin: 0;
-    margin-bottom: .75em;
-    padding: 0;
-    border-bottom: 1px solid #475345;
-    border-top: 1px solid #475345;
-}
-#author {
-    margin-right: 1.8em;
-}
-#meta {
-    position: relative;
-    top: -1.35em;
-}
 /* Styling the header/mast */
-body>header>h1 {
+body>header.index-mark>h1 {
     font-size: 16em;
     text-align: center;
     margin-top:     0.140625em;
     margin-bottom:  0.046875em;
+}
+body>header.post-mark {
+    min-width: 35em;
+    max-width: 40em;
+    margin: 0 auto;
+    height: 0;
+}
+body>header.post-mark>h1 {
+    font-size: 3em;
+    text-align: left;
+    line-height: 2.35em;
 }
 body>header>h1>a {
     text-decoration: none !important;
@@ -126,6 +124,7 @@ div.highlight {
 img {
     padding: .75em;
     margin: -.75em auto;
-    background-color: rgba(71,83,69,0.25);
-    max-width: 100%;
+    background-color: #f0f0f0;
+    max-width: 94%;
+    display: block;
 }
