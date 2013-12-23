@@ -1,6 +1,6 @@
 safe: true
 name: 'Simon Sigurdhsson'
-url: http://urdh.github.com/
+url: http://sigurdhsson.org/
 
 future: false
 permalink: /:categories/:year/:month/:title
