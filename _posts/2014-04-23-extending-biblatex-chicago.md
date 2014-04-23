@@ -11,7 +11,7 @@ While most of the requirements made by Chalmers are well approximated by the [bi
 Luckily, the format [is simple][referensguide-lag] and you can easily replicate the behaviour using the generic `@misc` entry type:
 
     @misc{PUL,
-        author = {{SFS 1998:204}},
+        author = {{ "{{" }}SFS 1998:204}},
         title = {Personuppgiftslag},
         organization = {Justitiedepartementet},
         location = {Stockholm}
