@@ -42,7 +42,7 @@ This is not difficult:
             \map{
                 \step[typesource=legislation, typetarget=misc, final]
                 \step[fieldsource=number, match=\regexp{(.*)}]
-                \step[fieldset=author, fieldvalue=\regexp{{$1}}]
+                \step[fieldset=author, fieldvalue=\regexp{{ "{{" }}$1}}]
             }
         }
     }
