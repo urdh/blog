@@ -1,6 +1,6 @@
 safe: true
 name: 'Simon Sigurdhsson'
-url: http://sigurdhsson.org/
+url: http://sigurdhsson.org
 
 future: false
 permalink: /:categories/:year/:month/:title
@@ -8,3 +8,6 @@ permalink: /:categories/:year/:month/:title
 markdown: rdiscount
 pygments: true
 rdiscount extensions: [smart,filter_styles]
+
+gems:
+  - jekyll-sitemap
