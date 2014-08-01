@@ -6,8 +6,9 @@ future: false
 permalink: /:categories/:year/:month/:title
 
 markdown: rdiscount
-pygments: true
 rdiscount extensions: [smart,filter_styles]
+
+highlighter: pygments
 
 gems:
   - jekyll-sitemap
