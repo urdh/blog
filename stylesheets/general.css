@@ -128,6 +128,13 @@ img {
     max-width: 94%;
     display: block;
 }
+/* Profile picture */
+#profile-pic {
+    float: right;
+    border-radius: 50%;
+    padding: 3px;
+    margin: 0 0 1.5ex 1.5em;
+}
 /* Social media stuff */
 #social {
     list-style: none;
