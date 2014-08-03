@@ -1,0 +1,14 @@
+---
+layout: nil
+permalink: /robots.txt
+---
+User-agent: Googlebot
+Disallow: 
+
+User-agent: ia_archiver
+Disallow: 
+
+User-agent: *
+Disallow: /
+
+Sitemap: http://www.sigurdhsson.org/sitemap.xml
