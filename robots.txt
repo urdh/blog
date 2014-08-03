@@ -2,13 +2,31 @@
 layout: nil
 permalink: /robots.txt
 ---
+# Disallow Google news/image/video/ad/mediapartner bots
+User-agent: Googlebot-News
+Disallow: /
+User-agent: Googlebot-Image
+Disallow: /
+User-agent: Googlebot-Video
+Disallow: /
+User-agent: Adsbot-Google
+Disallow: /
+User-agent: Mediapartners-Google
+Disallow: /
+
+# Allow google regular/mobile bots
+User-agent: Googlebot-Mobile
+Disallow: 
 User-agent: Googlebot
 Disallow: 
 
+# Allow Alexa/WebArchive bot
 User-agent: ia_archiver
 Disallow: 
 
+# Disallow all others
 User-agent: *
 Disallow: /
 
+# We have a sitemap!
 Sitemap: http://www.sigurdhsson.org/sitemap.xml
