@@ -2,10 +2,16 @@ safe: true
 name: 'Simon Sigurdhsson'
 url: http://sigurdhsson.org
 
+timezone: Europe/Stockholm
+encoding: utf-8
+
 future: false
 permalink: /:categories/:year/:month/:title
 
 markdown: kramdown
+kramdown:
+  input: GFM
+
 highlighter: pygments
 
 gems:
