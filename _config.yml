@@ -16,3 +16,12 @@ highlighter: pygments
 
 gems:
   - jekyll-sitemap
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: page
+    values:
+      layout: post
+      author: 'Simon Sigurdhsson'
