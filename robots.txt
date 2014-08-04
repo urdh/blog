@@ -1,7 +1,3 @@
----
-layout: nil
-permalink: /robots.txt
----
 # Disallow Google news/image/video/ad/mediapartner bots
 User-agent: Googlebot-News
 Disallow: /

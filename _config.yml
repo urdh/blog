@@ -20,7 +20,7 @@ gems:
 defaults:
   -
     scope:
-      path: ""
+      path: ''
       type: page
     values:
       layout: post
