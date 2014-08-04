@@ -5,9 +5,7 @@ url: http://sigurdhsson.org
 future: false
 permalink: /:categories/:year/:month/:title
 
-markdown: rdiscount
-rdiscount extensions: [smart,filter_styles]
-
+markdown: kramdown
 highlighter: pygments
 
 gems:

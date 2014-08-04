@@ -10,23 +10,27 @@ While most of the requirements made by Chalmers are well approximated by the [bi
 
 Luckily, the format [is simple][referensguide-lag] and you can easily replicate the behaviour using the generic `@misc` entry type:
 
-    @misc{PUL,
-        author = {{ "{{" }}SFS 1998:204}},
-        title = {Personuppgiftslag},
-        organization = {Justitiedepartementet},
-        location = {Stockholm}
-    }
+~~~ bibtex
+@misc{PUL,
+    author = {{ "{{" }}SFS 1998:204}},
+    title = {Personuppgiftslag},
+    organization = {Justitiedepartementet},
+    location = {Stockholm}
+}
+~~~
 
 Of course, this is nonintuitive and looks strange (the law number is clearly not an author, and the intention of the entry would be clearer if the `@legislation` was used), and one has to pay attention when mis-using the author field like this to avoid re-ordering of words in the non-name.
 
 A better entry might look like this:
 
-    @legislation{PUL,
-        number = {SFS 1998:204},
-        title = {Personuppgiftslag},
-        organization = {Justitiedepartementet},
-        location = {Stockholm}
-    }
+~~~ bibtex
+@legislation{PUL,
+    number = {SFS 1998:204},
+    title = {Personuppgiftslag},
+    organization = {Justitiedepartementet},
+    location = {Stockholm}
+}
+~~~
 
 This is clearly a legislation reference, and the law number is intuitively specified as a number.
 But how do we make biblatex understand this entry type?
@@ -37,15 +41,17 @@ What we want to do is to map the `@legislation` type to something similar to the
 As such, we must map the entry type to `@misc` and the `number` field to the `author` field.
 This is not difficult:
 
-    \DeclareSourcemap{
-        \maps{
-            \map{
-                \step[typesource=legislation, typetarget=misc, final]
-                \step[fieldsource=number, match=\regexp{(.*)}]
-                \step[fieldset=author, fieldvalue=\regexp{{ "{{" }}$1}}]
-            }
+~~~ latex
+\DeclareSourcemap{
+    \maps{
+        \map{
+            \step[typesource=legislation, typetarget=misc, final]
+            \step[fieldsource=number, match=\regexp{(.*)}]
+            \step[fieldset=author, fieldvalue=\regexp{{ "{{" }}$1}}]
         }
     }
+}
+~~~
 
 Here, we apply a source map with three steps to all input sources.
 The first step maps our new `@legislation` type to `@misc`.
