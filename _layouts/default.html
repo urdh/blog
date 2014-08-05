@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" itemscope itemtype="http://schema.org/Blog">
 	<head>
 		<meta charset="utf-8">
 		<title>{{ page.title }}</title>
@@ -10,7 +10,8 @@
     <link href="/stylesheets/syntax.css" rel="stylesheet">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     {% if id == '/index.html' %}<link rel="alternate" type="application/atom+xml" href="/atom.xml" />{% endif %}
-    <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html',''}}">
+    <link itemprop="url" href="{{ site.url }}">
+	<link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html',''}}">
 	</head>
 	<body class="sweet-hyphens">
     {{ content }}
@@ -23,19 +24,20 @@
           <p>You can't comment on these articles; if you've got something to say, write a blog post or send me an email. There is also no official archive; articles are rarely interesting for very long and if they are you'd bookmark them anyway. Old posts will stay online and can be browsed through in the <a href="{{ site.github.repository_url }}">Github repository</a> if you're interested.</p>
       </nav>
       <footer>
-        <section id="author">
+        <section itemprop="author" id="author" itemscope itemtype="http://schema.org/Person">
           <h1>The author</h1>
-          <img id="profile-pic" src="http://www.gravatar.com/avatar/2e225ff5beb684088f5c9131d3979a18.png" alt="Avatar of Simon Sigurdhsson">
+		  <p itemprop="name" id="author-name">Simon Sigurdhsson</p>
+          <img itemprop="image" id="profile-pic" src="http://www.gravatar.com/avatar/2e225ff5beb684088f5c9131d3979a18.png" alt="Avatar of Simon Sigurdhsson">
           <p>
-            You can contact me via <a rel="author" href="http://www.google.com/recaptcha/mailhide/d?k=01AE2kOWqDabQ4PvNe9QuAiw==&amp;c=4o8n3wF8OoZTUvLus64oT-H83jhO0d5JP_qEaGtUN1g=">email</a>.
-            I'm also on <a href="http://github.com/urdh/">Github</a>, <a href="http://facebook.com/sigurdhsson/">Facebook</a>, <a href="https://twitter.com/urdh">Twitter</a>, <a rel="author" href="https://plus.google.com/+SimonSigurdhsson?rel=author">Google+</a>, <a href="http://pinboard.in/u:urdh">Pinboard</a>, <a href="http://stackoverflow.com/users/147845/you">Stack Overflow</a> and <a href="http://500px.com/urdh">500px</a>. My projects on Github include <a href="http://urdh.github.com/dotfiles">dotfiles</a>, <a href="http://urdh.github.com/latexhax.html">latexhax</a>, <a href="http://urdh.github.com/latexbok">latexbok</a> and <a href="http://urdh.github.com/streck">streck</a>.
+            You can contact me via <a itemprop="email" rel="author" href="http://www.google.com/recaptcha/mailhide/d?k=01AE2kOWqDabQ4PvNe9QuAiw==&amp;c=4o8n3wF8OoZTUvLus64oT-H83jhO0d5JP_qEaGtUN1g=">email</a>.
+            I'm also on <a href="http://github.com/urdh/">Github</a>, <a itemprop="sameAs" href="http://facebook.com/sigurdhsson/">Facebook</a>, <a href="https://twitter.com/urdh">Twitter</a>, <a itemprop="sameAs" rel="author" href="https://plus.google.com/+SimonSigurdhsson?rel=author">Google+</a>, <a href="http://pinboard.in/u:urdh">Pinboard</a>, <a href="http://stackoverflow.com/users/147845/you">Stack Overflow</a> and <a href="http://500px.com/urdh">500px</a>. My projects on Github include <a href="http://urdh.github.com/dotfiles">dotfiles</a>, <a href="http://urdh.github.com/latexhax.html">latexhax</a>, <a href="http://urdh.github.com/latexbok">latexbok</a> and <a href="http://urdh.github.com/streck">streck</a>.
           </p>
         </section>
         <section id="meta">
           <h1>Meta</h1>
           <p>
             Also available as an <a rel="alternate" type="application/atom+xml" href="/atom.xml">atom feed</a>.
-            All written content is available under the <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 license</a>.
+            All written content is available under the <a itemprop="license" rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 license</a>.
           </p>
         </section>
       </footer>

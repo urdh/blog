@@ -52,6 +52,9 @@ article hr {
 .post+.anchor, .not-found+.anchor {
     margin-top: 4.5em;
 }
+article>header>.pubdate {
+    display: none;
+}
 /* Styling the anchor stuff */
 .anchor {
     padding: 1.5em;
@@ -82,6 +85,9 @@ article hr {
     min-width: 25em;
     max-width: 30em;
     margin: 0 auto;
+}
+#author-name {
+    display: none;
 }
 /* Styling the header/mast */
 body>header.index-mark>h1 {
