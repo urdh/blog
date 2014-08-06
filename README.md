@@ -3,6 +3,10 @@ urdh.github.com
 
 This may become a blog in the future.
 
+All generated content is validated using a Travis CI setup.
+
+[![Build Status](https://travis-ci.org/urdh/urdh.github.com.svg?branch=master)](https://travis-ci.org/urdh/urdh.github.com)
+
 ## License
 
 The code, meaning all files in this repository not inside the `_posts`
