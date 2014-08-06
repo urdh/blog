@@ -1,0 +1,11 @@
+language: ruby
+
+install:
+  - gem install github-pages
+  - gem install nokogiri
+  - gem install w3c_validators
+  - gem install colorize
+
+script:
+  - jekyll build
+  - ./validate.rb

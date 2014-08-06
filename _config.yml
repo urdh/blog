@@ -25,3 +25,9 @@ defaults:
     values:
       layout: post
       author: 'Simon Sigurdhsson'
+
+exclude:
+  - .travis.yml
+  - validate.rb
+  - README.md
+  - CNAME
