@@ -31,3 +31,5 @@ exclude:
   - validate.rb
   - README.md
   - CNAME
+  - Gemfile
+  - Gemfile.lock

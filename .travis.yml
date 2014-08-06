@@ -2,12 +2,7 @@ language: ruby
 rvm:
   - 2.1.0
 
-install:
-  - gem install github-pages
-  - gem install nokogiri
-  - gem install w3c_validators
-  - gem install colorize
-
+cache: bundler
 script:
-  - jekyll build
-  - ./validate.rb
+  - bundle exec jekyll build
+  - bundle exec ./validate.rb
