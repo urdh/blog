@@ -26,10 +26,11 @@ class XMLValidator < W3CValidators::Validator
             else
                 schema_uri = document.xpath('*/@xsi:schemaLocation').to_s.split[1]
                 schema = Nokogiri::XML::Schema(open(schema_uri).read)
-                is_valid = schema.validate(document).empty?
-                W3CValidators::Results.new({:uri => nil, :validity => is_valid})
+                errors = schema.validate(document)
+                r = W3CValidators::Results.new({:uri => nil, :validity => errors.empty?})
+                errors.each { |msg| r.add_message(:error, msg.to_s) if msg.error? }
             end
-        rescue Nokogiri::SyntaxError
+        rescue
             @results = W3CValidators::Results.new({:uri => nil, :validity => false})
         end
         @results
@@ -61,7 +62,7 @@ Dir.glob("_site/**/*") do |file|
     end
 
     begin
-        if validator.validate_file(file).is_valid?
+        if validator.validate_file(file).errors.empty?
             puts file.colorize(:green)
             passed += 1
         else
