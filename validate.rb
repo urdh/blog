@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 require 'rubygems'
 require 'nokogiri'
+require 'html5_validator'
 require 'w3c_validators'
 require 'colorize'
 require 'open-uri'
@@ -10,6 +11,8 @@ IGNORED_FILES = [
     '_site/javascript/sweet-justice.min.js'
 ]
 
+# Hack: w3c_validators doesn't provide a generic XML validator.
+# We provide a replacement based on Nokogiri with compatible interface.
 class XMLValidator < W3CValidators::Validator
     def validate_file(file)
         if file.respond_to? :read
@@ -33,23 +36,48 @@ class XMLValidator < W3CValidators::Validator
             end
         rescue
             @results = W3CValidators::Results.new({:uri => nil, :validity => false})
+            @results.add_message(:error, 'Nokogiri threw errors on input.')
         end
         @results
     end
 end
 
+# Hack: W3CValidators::NuValidator seems broken and the gem looks unmaintained.
+# We provide our own replacement based on the html5_validator gem, with compatible interface.
+class HtmlValidator < W3CValidators::Validator
+    def validate_file(file)
+        if file.respond_to? :read
+            src = file.read
+            file_path = file.path ||= nil
+        else
+            src = read_local_file(file)
+            file_path = file
+        end
+
+        validator = Html5Validator::Validator.new
+        validator.validate_text(src)
+        @results = W3CValidators::Results.new({:uri => nil, :validity => validator.valid?})
+        validator.errors.each { |err| @results.add_message(:error, err['message']) }
+        @results
+    end
+end
+
+puts "Validating jekyll output in '_site/'..."
+puts "\n"
 failed = 0
 passed = 0
 skipped = 0
 
-# ...
+# Iterate over all the site files and validate them as appropriate.
 Dir.glob("_site/**/*") do |file|
+    # Skip ignored files and all directories
     next if File.directory?(file)
     next if IGNORED_FILES.include? file
 
+    # Since all validators have compatible interfaces, we create the appropriate instance...
     validator = case File.extname(file)
     when '.html'
-        W3CValidators::NuValidator.new
+        HtmlValidator.new
     when '.xml'
         if File.basename(file) == 'atom.xml'
             W3CValidators::FeedValidator.new
@@ -59,26 +87,21 @@ Dir.glob("_site/**/*") do |file|
     when '.css'
         W3CValidators::CSSValidator.new
     else
-        nil
+        skipped += 1
+        puts file.colorize(:light_black)
+        next
     end
 
-    begin
-        if validator.validate_file(file).errors.empty?
-            puts file.colorize(:green)
-            passed += 1
-        else
-            puts file.colorize(:red)
-            failed += 1
-        end
-    rescue
-        puts file
-        skipped += 1
+    # ... and then run the validation.
+    if validator.validate_file(file).errors.empty?
+        puts file.colorize(:green)
+        passed += 1
+    else
+        puts file.colorize(:red)
+        failed += 1
     end
 end
 
 puts "\n"
-puts "#{skipped} files skipped due to missing or broken validators." if skipped > 0
-puts ""
-puts "#{passed} files pass validation.".colorize(:green)
-puts "#{failed} files failed to validate!".colorize(:red) if failed > 0
+puts "#{passed} files pass validation, #{failed} files failed."
 exit failed
