@@ -6,7 +6,8 @@ require 'colorize'
 require 'open-uri'
 
 IGNORED_FILES = [
-    '_site/stylesheets/normalize.css'
+    '_site/stylesheets/normalize.css',
+    '_site/javascript/sweet-justice.min.js'
 ]
 
 class XMLValidator < W3CValidators::Validator
