@@ -1,0 +1,15 @@
+---
+layout: atom
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>{{ site.name }}</title>
+    <link href="{{ site.url }}{{ page.url }}" rel="self"/>
+    <updated>{{ site.time | date_to_xmlschema }}</updated>
+    <id>{{ site.url }}/</id>
+    <author>
+        <name>Simon Sigurdhsson</name>
+        <email>Sigurdhsson+blog@gmail.com</email>
+    </author>
+    {{ content }}
+</feed>
