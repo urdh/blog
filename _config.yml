@@ -5,7 +5,7 @@ url: http://sigurdhsson.org
 timezone: Europe/Stockholm
 encoding: utf-8
 
-future: false
+future: true
 permalink: /:categories/:year/:month/:title
 
 markdown: kramdown
