@@ -8,7 +8,9 @@ require 'open-uri'
 
 IGNORED_FILES = [
     '_site/stylesheets/normalize.css',
-    '_site/javascript/sweet-justice.min.js'
+    '_site/javascript/sweet-justice.min.js',
+    '_site/stylesheets/mjulb.min.css',
+    '_site/javascript/mjulb.min.js'
 ]
 
 # Hack: w3c_validators doesn't provide a generic XML validator.
