@@ -21,7 +21,7 @@ defaults:
   -
     scope:
       path: ''
-      type: page
+      type: pages
     values:
       layout: post
       author: 'Simon Sigurdhsson'
