@@ -55,6 +55,35 @@ article hr {
 article>header>.pubdate {
     display: none;
 }
+.footnotes {
+    margin-top: 2em;
+    border-top: 1px solid #CCCFCC;
+    font-size: smaller;
+    color: #737D73;
+}
+.footnotes a {
+    color: #868585;
+}
+.footnotes a:hover {
+    color: #E36A64;
+}
+.footnotes ol {
+    padding: 0;
+    list-style-position: inside;
+    counter-reset: footnotes;
+    display: table;
+}
+.footnotes li {
+    margin: 1ex 0;
+    counter-increment: footnotes;
+    display: table-row;
+}
+.footnotes li::before {
+    content: counter(footnotes) ".";
+    display: table-cell;
+    text-align: right;
+    padding-right: 1ex;
+}
 /* Styling the anchor stuff */
 .anchor {
     padding: 1.5em;
