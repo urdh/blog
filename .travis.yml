@@ -8,4 +8,4 @@ script:
   - bundle exec ./validate.rb
 
 after_success:
-  - 'curl -s http://google.com/ping\?sitemap=http:%3A%2F%2Fsigurdhsson.org%2Fsitemap.xml > /dev/null'
+  - 'curl -s http://google.com/ping\?sitemap=http:%3A%2F%2Fblog.sigurdhsson.org%2Fsitemap.xml > /dev/null'

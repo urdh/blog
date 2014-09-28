@@ -12,17 +12,17 @@ Disallow: /
 
 # Allow google regular/mobile bots
 User-agent: Googlebot-Mobile
-Disallow: 
+Disallow:
 User-agent: Googlebot
-Disallow: 
+Disallow:
 
 # Allow Alexa/WebArchive bot
 User-agent: ia_archiver
-Disallow: 
+Disallow:
 
 # Disallow all others
 User-agent: *
 Disallow: /
 
 # We have a sitemap!
-Sitemap: http://www.sigurdhsson.org/sitemap.xml
+Sitemap: http://blog.sigurdhsson.org/sitemap.xml
