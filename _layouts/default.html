@@ -12,7 +12,7 @@
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     {% if id == '/index.html' %}<link rel="alternate" type="application/atom+xml" href="/atom.xml" />{% endif %}
     <link itemprop="url" href="{{ site.url }}">
-	<link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html',''}}">
+	<link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html',''}}" data-proofer-ignore>
 	</head>
 	<body class="sweet-hyphens">
     {{ content }}

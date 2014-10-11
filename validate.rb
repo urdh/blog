@@ -5,6 +5,7 @@ require 'html5_validator'
 require 'w3c_validators'
 require 'colorize'
 require 'open-uri'
+require 'html/proofer'
 
 IGNORED_FILES = [
     '_site/stylesheets/normalize.css',
@@ -104,6 +105,17 @@ Dir.glob("_site/**/*") do |file|
     end
 end
 
+htmlproofer = true
+if ENV['CI'] == 'true'
+  puts "Running html-proofer in content in '_site/'..."
+  puts "\n"
+  htmlproofer = HTML::Proofer.new("./_site", {:ssl_verifyhost => 2,
+                                              :parallel => { :in_processes => 3} }).run
+end
+
 puts "\n"
 puts "#{passed} files pass validation, #{failed} files failed."
+puts "The html-proofer test failed!" unless htmlproofer
+
+failed += 1 unless htmlproofer
 exit failed
