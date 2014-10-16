@@ -20,7 +20,7 @@ So, how would this publishing model work, anyway?
 [jekyll-sites]: https://github.com/mojombo/jekyll/wiki/Sites
 [gitready-pulls]: https://github.com/gitready/gitready/pulls?direction=desc&page=1&sort=created&state=closed
 [wtfjs]: http://wtfjs.com
-[gh-pub]: http://schamberlain.github.com/scott/2012/02/13/a-github-publishing-model/
+[gh-pub]: https://web.archive.org/web/20120829064534/http://schamberlain.github.com/scott/2012/02/13/a-github-publishing-model
 
 ## The setup
 
