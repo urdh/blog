@@ -35,11 +35,12 @@ class XMLValidator < W3CValidators::Validator
                 schema = Nokogiri::XML::Schema(open(schema_uri).read)
                 errors = schema.validate(document)
                 r = W3CValidators::Results.new({:uri => nil, :validity => errors.empty?})
-                errors.each { |msg| r.add_message(:error, msg.to_s) if msg.error? }
+                errors.each { |msg| r.add_error({ :message => msg.to_s }) if msg.error? }
+                r
             end
         rescue
             @results = W3CValidators::Results.new({:uri => nil, :validity => false})
-            @results.add_message(:error, 'Nokogiri threw errors on input.')
+            @results.add_error({ :message => 'Nokogiri threw errors on input.' })
         end
         @results
     end
@@ -60,7 +61,7 @@ class HtmlValidator < W3CValidators::Validator
         validator = Html5Validator::Validator.new
         validator.validate_text(src)
         @results = W3CValidators::Results.new({:uri => nil, :validity => validator.valid?})
-        validator.errors.each { |err| @results.add_message(:error, err['message']) }
+        validator.errors.each { |err| @results.add_error({ :message => err['message'] }) }
         @results
     end
 end
