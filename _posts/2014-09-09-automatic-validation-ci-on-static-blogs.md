@@ -40,5 +40,5 @@ As an added bonus, the Travis configuration used here also pings Google with an 
 [travis-to-heroku]: https://coderwall.com/p/st0hcq
 [gh-versions]: https://pages.github.com/versions/
 
-[validate.rb]: https://github.com/urdh/urdh.github.com/blob/cf73a78f40a5cbcec127b185894415354c082001/validate.rb
-[.travis.yml]: https://github.com/urdh/urdh.github.com/blob/1c3442c775ae4c9e3fd3778e57080089daa9ff67/.travis.yml
+[validate.rb]: https://github.com/urdh/blog/blob/cf73a78f40a5cbcec127b185894415354c082001/validate.rb
+[.travis.yml]: https://github.com/urdh/blog/blob/1c3442c775ae4c9e3fd3778e57080089daa9ff67/.travis.yml
