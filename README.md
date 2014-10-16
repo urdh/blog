@@ -1,11 +1,11 @@
-urdh.github.com
+Blog
 ===============
 
 This may become a blog in the future.
 
 All generated content is validated using a Travis CI setup.
 
-[![Build Status](https://travis-ci.org/urdh/urdh.github.com.svg?branch=master)](https://travis-ci.org/urdh/urdh.github.com)
+[![Build Status](https://travis-ci.org/urdh/blog.svg?branch=gh-pages)](https://travis-ci.org/urdh/blog)
 
 ## License
 
