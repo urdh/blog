@@ -22,7 +22,7 @@
           <ul>{% for post in site.posts limit:5 %}
             <li>{{ post.linkchat | replace:'<self>',post.url | markdownify }}</li>
           {% endfor %}</ul>
-          <p>You can't comment on these articles; if you've got something to say, write a blog post or send me an email. There is also no official archive; articles are rarely interesting for very long and if they are you'd bookmark them anyway. Old posts will stay online and can be browsed through in the <a href="{{ site.github.repository_url }}">Github repository</a> if you're interested.</p>
+          <p>You can't comment on these articles; if you've got something to say, write a blog post or send me an email. There is also no official archive; articles are rarely interesting for very long and if they are you'd bookmark them anyway. Old posts will stay online and can be browsed through in the <a href="{{ site.github.repository_url }}" data-proofer-ignore>Github repository</a> if you're interested.</p>
       </nav>
       <footer>
         <section itemprop="author" id="author" itemscope itemtype="http://schema.org/Person">

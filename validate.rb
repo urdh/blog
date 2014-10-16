@@ -106,13 +106,10 @@ Dir.glob("_site/**/*") do |file|
     end
 end
 
-htmlproofer = true
-if ENV['CI'] == 'true'
-  puts "Running html-proofer in content in '_site/'..."
-  puts "\n"
-  htmlproofer = HTML::Proofer.new("./_site", {:ssl_verifyhost => 2,
-                                              :parallel => { :in_processes => 3} }).run
-end
+puts "Running html-proofer in content in '_site/'..."
+puts "\n"
+htmlproofer = HTML::Proofer.new("./_site", {:ssl_verifyhost => 2,
+                                            :parallel => { :in_processes => 3} }).run
 
 puts "\n"
 puts "#{passed} files pass validation, #{failed} files failed."
