@@ -6,7 +6,9 @@ branches:
   only:
     - gh-pages
 
+sudo: false
 cache: bundler
+
 script:
   - bundle exec jekyll build
   - bundle exec ./validate.rb
