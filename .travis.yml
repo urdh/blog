@@ -9,6 +9,10 @@ branches:
 sudo: false
 cache: bundler
 
+# Make build error instead of fail when validator.nu is down
+before_install:
+  - wget -O /dev/null http://validator.nu
+
 script:
   - bundle exec jekyll build
   - bundle exec ./validate.rb
