@@ -1,3 +1,5 @@
+/* For non-highlighted code */
+pre { background: #202020; color: #d0d0d0 }
 /* Pygments syntax CSS */
 .highlight .hll { background-color: #404040 }
 .highlight  { background: #202020; color: #d0d0d0 }
