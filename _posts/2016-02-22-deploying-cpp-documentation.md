@@ -10,7 +10,7 @@ The Github ecosystem is full of exciting projects designed to make pushing [well
 [well-crafted]: https://codeclimate.com
 [well-documented]: https://readthedocs.com
 [frequently deployed]: https://travis-ci.org
-[badges]: https://hields.io
+[badges]: http://shields.io
 
 [^modern]: E.g. anything more recent than C++03.
 
