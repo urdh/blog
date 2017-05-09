@@ -8,9 +8,11 @@ linkchat: I explored the possibility of a [Github-based publishing model](<self>
 
 Given the [Github pages][gh-p] service, is this something we can utilize for publishing? Using the provided [Jekyll][jekyll]-based service for blogging has [been][mojombo] [explored][m8ck] [thoroughly][jekyll-sites], and there are even examples of [collaboration][gitready-pulls] in the form of submitted translations.
 
-The Github user interface and API could be taken further, though. Concepts such as editing and reviewing submissions are easily implemented by using the existing Github UI, but this doesn't seem to be anything that has caught on. There are few [examples][wtfjs], and although the subject has been [touched upon][gh-pub] there doesn't seem to be any serious work done.
+The Github user interface and API could be taken further, though. Concepts such as editing and reviewing submissions are easily implemented by using the existing Github UI, but this doesn't seem to be anything that has caught on. There are few [examples][wtfjs][^1], and although the subject has been touched upon there doesn't seem to be any serious work done.
 
 So, how would this publishing model work, anyway?
+
+[^1]: Now defunct, as of 2017-01-12.
 
 [gh]: http://github.com
 [gh-p]: http://pages.github.com
@@ -19,9 +21,7 @@ So, how would this publishing model work, anyway?
 [m8ck]: http://m8ck.us.to
 [jekyll-sites]: https://github.com/mojombo/jekyll/wiki/Sites
 [gitready-pulls]: https://github.com/gitready/gitready/pulls?direction=desc&page=1&sort=created&state=closed
-[wtfjs]: http://wtfjs.com
-[gh-pub]: https://web.archive.org/web/20120829064534/http://schamberlain.github.com/scott/2012/02/13/a-github-publishing-model
-
+[wtfjs]: https://web.archive.org/web/20160503132616/wtfjs.com
 ## The setup
 
 Setting up a reviewed online publication on Github is not difficult. There are only a few concepts that have to be adapted to the Github workflow, and those fall into place  easily.

@@ -53,8 +53,8 @@ Unfortunately the first step disqualifies services such as [Read the Docs], sinc
 
 In this particular instance, I have [a somewhat over-engineered Python script][build-docs.py] which I [call from CMake][CMakeLists.txt]. It sets up a virtual environment containing the necessary Python modules, hides the Doxygen configuration required to generate the Doxygen XML output, and feeds this output appropriately to Sphinx. The result is generated HTML documentation in the build path, ready for deployment.
 
-[build-docs.py]: https://github.com/urdh/libeu4/blob/5f91e78/support/build-docs.py#L105-L193
-[CMakeLists.txt]: https://github.com/urdh/libeu4/blob/5f91e78/docs/CMakeLists.txt#L6-L14
+[build-docs.py]: https://gist.github.com/urdh/de3fcdd358b66d594dce00f331813d06#file-build-docs-py-L105-L193
+[CMakeLists.txt]: https://gist.github.com/urdh/de3fcdd358b66d594dce00f331813d06#file-cmakelists-txt-L6-L14
 
 ## Deploying the documentation
 
@@ -102,8 +102,8 @@ deploy:
 
 In essence, the script checks out the latest `gh-pages` commit, replaces the contents with a newly built copy of the documentation and tries to push the changes. If nothing has changed, it will silently fail (which is fine).
 
-[deploy-docs.sh]: https://github.com/urdh/libeu4/blob/5f91e78/support/deploy-docs.sh
-[travis.yml]: https://github.com/urdh/libeu4/blob/5f91e78/.travis.yml#L110-L116
+[deploy-docs.sh]: https://gist.github.com/urdh/de3fcdd358b66d594dce00f331813d06#file-build-docs-py
+[travis.yml]: https://gist.github.com/urdh/de3fcdd358b66d594dce00f331813d06#file-travis-yml-L110-L116
 
 [^travis-note]: You need to set up a personal access token for the build job as well. Don't forget to store it in a secure environment variable.
 
