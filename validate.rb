@@ -4,6 +4,7 @@ require 'nokogiri'
 require 'html5_validator'
 require 'w3c_validators'
 require 'open-uri'
+require 'open_uri_redirections'
 require 'html-proofer'
 require 'colorize'
 
@@ -33,7 +34,7 @@ class XMLValidator < W3CValidators::Validator
                 W3CValidators::Results.new({:uri => nil, :validity => true})
             else
                 schema_uri = document.xpath('*/@xsi:schemaLocation').to_s.split[1]
-                schema = Nokogiri::XML::Schema(open(schema_uri).read)
+                schema = Nokogiri::XML::Schema(open(schema_uri, :allow_redirections => :safe).read)
                 errors = schema.validate(document)
                 r = W3CValidators::Results.new({:uri => nil, :validity => errors.empty?})
                 errors.each { |msg| r.add_error({ :message => msg.to_s }) if msg.error? }
