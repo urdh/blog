@@ -14,7 +14,7 @@ kramdown:
 
 highlighter: rouge
 
-gems:
+plugins:
   - jekyll-sitemap
 
 defaults:
