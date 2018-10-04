@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-gem 'github-pages', '>= 138'
+gem 'github-pages', '>= 192'
 gem 'nokogiri', '>= 1.8.2'
 gem 'html5_validator'
 gem 'w3c_validators', '>= 1.3.2'
