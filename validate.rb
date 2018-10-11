@@ -110,7 +110,8 @@ end
 
 puts "Running html-proofer in content in '_site/'..."
 puts "\n"
-htmlproofer = HTMLProofer.check_directory("./_site", {:ssl_verifyhost => 2,
+htmlproofer = HTMLProofer.check_directory("./_site", {:ssl_verifyhost => 0,
+                                                      :ssl_verifypeer => false,
                                                       :parallel => { :in_processes => 3} }).run
 
 puts "\n"
