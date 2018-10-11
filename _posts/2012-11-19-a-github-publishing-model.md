@@ -18,7 +18,7 @@ So, how would this publishing model work, anyway?
 [gh-p]: http://pages.github.com
 [jekyll]: http://jekyllrb.com
 [mojombo]: http://tom.preston-werner.com
-[m8ck]: http://m8ck.us.to
+[m8ck]: https://github.com/emory/m8ck.us.to
 [jekyll-sites]: https://github.com/mojombo/jekyll/wiki/Sites
 [gitready-pulls]: https://github.com/gitready/gitready/pulls?direction=desc&page=1&sort=created&state=closed
 [wtfjs]: https://web.archive.org/web/20160503132616/wtfjs.com

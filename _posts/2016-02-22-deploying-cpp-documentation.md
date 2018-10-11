@@ -22,7 +22,7 @@ Many modern languages come with simple and sensible standards or conventions for
 
 [Doxygen]: http://www.stack.nl/~dimitri/doxygen/
 [cldoc]: https://github.com/jessevdk/cldoc
-[doxygen-md]: https://www.stack.nl/~dimitri/doxygen/manual/markdown.html
+[doxygen-md]: http://www.stack.nl/~dimitri/doxygen/manual/markdown.html
 
 [^doc-examples]: For instance, Go has [godoc], Rust has [doc comments][rustdoc], and Python has [docstrings]. They all use simple, human-readable conventions and can generate lightweight documentation in HTML format.
 
