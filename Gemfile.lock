@@ -296,7 +296,7 @@ PLATFORMS
 
 DEPENDENCIES
   colorize
-  github-pages (>= 181)
+  github-pages (>= 192)
   html-proofer (>= 3.8.0)
   html5_validator
   nokogiri (>= 1.8.5)
