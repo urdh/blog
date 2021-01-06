@@ -3,9 +3,9 @@
 /* Vertical flow, see http://blog.sigurdhsson.org/posts/I-X/on-web-typesetting.html */
 @import url(verticalflow.css);
 /* Webfonts */
-@import url(http://fonts.googleapis.com/css?family=PT+Serif);
-@import url(http://fonts.googleapis.com/css?family=Open+Sans);
-@import url(http://fonts.googleapis.com/css?family=Anonymous+Pro);
+@import url(//fonts.googleapis.com/css?family=PT+Serif);
+@import url(//fonts.googleapis.com/css?family=Open+Sans);
+@import url(//fonts.googleapis.com/css?family=Anonymous+Pro);
 /* Basic font definitions */
 html, button, input, select, textarea {
     font-family: 'PT Serif', serif;
