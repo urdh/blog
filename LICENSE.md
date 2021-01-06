@@ -7,7 +7,7 @@ directory, which is mad available under the [CC-BY-3.0 license][ccby3]
 as stated in [the README][readme].
 
 [ccby3]: http://creativecommons.org/licenses/by/3.0/deed
-[readme]: https://github.com/urdh/blog/blob/gh-pages/README.md
+[readme]: https://github.com/urdh/blog/blob/master/README.md
 
 ```
 Creative Commons Legal Code
