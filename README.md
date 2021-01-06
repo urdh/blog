@@ -3,9 +3,9 @@ Blog
 
 This may become a blog in the future.
 
-All generated content is validated using a Travis CI setup.
+All generated content is validated using a GitHub Workflow setup.
 
-[![Build Status](https://travis-ci.org/urdh/blog.svg?branch=gh-pages)](https://travis-ci.org/urdh/blog)
+[![Build Status](https://github.com/urdh/blog/workflows/Check%20for%20broken%20links/badge.svg)](https://github.com/urdh/blog/actions)
 
 ## License
 
