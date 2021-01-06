@@ -111,6 +111,8 @@ end
 puts "Running html-proofer in content in '_site/'..."
 puts "\n"
 htmlproofer = HTMLProofer.check_directory("./_site", {:ssl_verifyhost => 2,
+                                                      :only_4xx => true,
+                                                      :url_ignore => [/twitter.com\/share/],
                                                       :parallel => { :in_processes => 3} }).run
 
 puts "\n"
