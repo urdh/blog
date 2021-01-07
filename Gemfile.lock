@@ -301,6 +301,7 @@ DEPENDENCIES
   github-pages (>= 203)
   html-proofer (>= 3.17.0)
   html5_validator
+  jekyll-sitemap (>= 1.4.0)
   nokogiri (>= 1.10.5)
   open_uri_redirections
   w3c_validators (>= 1.3.3)
