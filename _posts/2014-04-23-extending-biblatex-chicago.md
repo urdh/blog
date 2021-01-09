@@ -4,7 +4,7 @@ layout: post
 linkchat: Adding [custom entry types to biblatex-chicago](<self>) turned out to be a simple hack.
 ---
 
-Universities often have requirements on the citation style used in reports, theses and the like; and Chalmers is [no exception][referensguide]. While most of the requirements made by Chalmers are well approximated by the [biblatex-chicago][chicago] package (specifically its author-date style), some entry types are just not defined. One of those entry types is `@legislation`.
+Universities often have requirements on the citation style used in reports, theses and the like; and Chalmers is no exception. While most of the requirements made by Chalmers are well approximated by the [biblatex-chicago][chicago] package (specifically its author-date style), some entry types are just not defined. One of those entry types is `@legislation`.
 
 
 Luckily, the format is simple and you can easily replicate the behaviour using the generic `@misc` entry type:
@@ -59,6 +59,5 @@ Using this mapping, we get the desired output for bibliography _and_ citations:
 
 Source mapping in biblatex is very powerful and not too difficult. For simple things like this, source mapping is an alternative to explicitly extending or hacking the bibliography style itself. Interested readers should look at the section on “Dynamic Modification of Data” in [the biblatex manual][biblatex], pages 143–151.
 
-[referensguide]: http://guides.lib.chalmers.se/referensguide
 [chicago]: http://mirrors.ctan.org/macros/latex/contrib/biblatex-contrib/biblatex-chicago/doc/biblatex-chicago.pdf
 [biblatex]: http://mirrors.ctan.org/macros/latex/contrib/biblatex/doc/biblatex.pdf
