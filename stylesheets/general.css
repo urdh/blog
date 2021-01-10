@@ -31,9 +31,10 @@ body {
     hyphens: auto;
 }
 body>article {
-    min-width: 25em;
+    min-width: 20em;
     max-width: 30em;
     margin: 0 auto;
+    padding: 0 1em;
 }
 body>article a {
     color: #627360;
@@ -116,9 +117,10 @@ article>header>.pubdate {
     list-style: disc;
 }
 #posts, .anchor>footer {
-    min-width: 25em;
+    min-width: 20em;
     max-width: 30em;
     margin: 0 auto;
+    padding: 0 1em;
 }
 #author-name {
     display: none;
@@ -131,15 +133,21 @@ body>header.index-mark>h1 {
     margin-bottom:  0.046875em;
 }
 body>header.post-mark {
-    min-width: 35em;
+    min-width: 38.5em;
     max-width: 40em;
     margin: 0 auto;
+    padding: 0 1em;
     height: 0;
 }
 body>header.post-mark>h1 {
     font-size: 3em;
     text-align: left;
     line-height: 2.35em;
+}
+@media (max-width: 38.5em) {
+    body>header.post-mark {
+        visibility: hidden;
+    }
 }
 body>header>h1>a {
     text-decoration: none !important;
