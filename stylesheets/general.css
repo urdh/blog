@@ -190,11 +190,14 @@ img {
     border: 0;
     color: #ccc;
 }
-#social a#social-fa:hover {
-    color: #3b5998;
-}
 #social a#social-tw:hover {
     color: #4099ff;
+}
+#social a#social-rd:hover {
+    color: #ff4500;
+}
+#social a#social-hn:hover {
+    color: #ff6600;
 }
 #social a span {
     display: none;
