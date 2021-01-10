@@ -10,7 +10,7 @@ The Github ecosystem is full of exciting projects designed to make pushing [well
 [well-crafted]: https://codeclimate.com
 [well-documented]: https://readthedocs.com
 [frequently deployed]: https://travis-ci.org
-[badges]: http://shields.io
+[badges]: https://shields.io
 
 [^modern]: E.g. anything more recent than C++03.
 
@@ -20,19 +20,19 @@ Add to this the difficulty of building beautiful documentation from such languag
 
 Many modern languages come with simple and sensible standards or conventions for writing documentation, and tools that turn them into readable, noise-free documentation[^doc-examples]. When it comes to C++, we're pretty much stuck with [Doxygen] if we want a maintained project for generating documentation (and Doxygen isn't exactly human-readable or lightweight). There are [attempts][cldoc] at [doing better][doxygen-md], but generally writing documentation for C++ is both difficult and ugly.
 
-[Doxygen]: http://www.doxygen.nl/
+[Doxygen]: https://www.doxygen.nl/
 [cldoc]: https://github.com/jessevdk/cldoc
-[doxygen-md]: http://www.doxygen.nl/manual/markdown.html
+[doxygen-md]: https://www.doxygen.nl/manual/markdown.html
 
 [^doc-examples]: For instance, Go has [godoc], Rust has [doc comments][rustdoc], and Python has [docstrings]. They all use simple, human-readable conventions and can generate lightweight documentation in HTML format.
 
-[godoc]: http://blog.golang.org/godoc-documenting-go-code
+[godoc]: https://blog.golang.org/godoc-documenting-go-code
 [rustdoc]: https://doc.rust-lang.org/book/comments.html
 [docstrings]: https://www.python.org/dev/peps/pep-0257/
 
 Making the best of what's there, my most recent attempt at generating a somewhat modern and readable documentation for one of my C++ projects utilizes a combination of Doxygen and [Sphinx][^sphinx-note], with [breathe] to link the two[^cppformat-fn]. This gives enough flexibility when it comes to the output, and the entire documentation can be written in a writer-friendly format such as reStructuredText (or in this case Common Markdown, with the help of [recommonmark]).
 
-[Sphinx]: http://www.sphinx-doc.org
+[Sphinx]: https://www.sphinx-doc.org
 [breathe]: https://github.com/michaeljones/breathe
 [recommonmark]: https://github.com/rtfd/recommonmark
 

@@ -59,5 +59,5 @@ Using this mapping, we get the desired output for bibliography _and_ citations:
 
 Source mapping in biblatex is very powerful and not too difficult. For simple things like this, source mapping is an alternative to explicitly extending or hacking the bibliography style itself. Interested readers should look at the section on “Dynamic Modification of Data” in [the biblatex manual][biblatex], pages 143–151.
 
-[chicago]: http://mirrors.ctan.org/macros/latex/contrib/biblatex-contrib/biblatex-chicago/doc/biblatex-chicago.pdf
-[biblatex]: http://mirrors.ctan.org/macros/latex/contrib/biblatex/doc/biblatex.pdf
+[chicago]: https://mirrors.ctan.org/macros/latex/contrib/biblatex-contrib/biblatex-chicago/doc/biblatex-chicago.pdf
+[biblatex]: https://mirrors.ctan.org/macros/latex/contrib/biblatex/doc/biblatex.pdf
