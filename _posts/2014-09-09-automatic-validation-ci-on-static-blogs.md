@@ -28,12 +28,12 @@ As an added bonus, the Travis configuration used here also pings Google with an 
 [travis]: https://travis-ci.org
 [gh]: https://github.com
 [gh-pages]: https://pages.github.com
-[bundler]: http://bundler.io
-[jekyll]: http://jekyllrb.com
-[validator.nu]: http://validator.nu
-[w3c-css]: http://jigsaw.w3.org/css-validator/
-[w3c-feed]: http://validator.w3.org/feed/
-[nokogiri]: http://nokogiri.org
+[bundler]: https://bundler.io
+[jekyll]: https://jekyllrb.com
+[validator.nu]: https://validator.nu
+[w3c-css]: https://jigsaw.w3.org/css-validator/
+[w3c-feed]: https://validator.w3.org/feed/
+[nokogiri]: https://nokogiri.org
 [html5_validator]: https://github.com/damian/html5_validator
 [w3c_validators]: https://github.com/alexdunae/w3c_validators
 

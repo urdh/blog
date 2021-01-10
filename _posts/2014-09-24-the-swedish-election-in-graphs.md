@@ -8,13 +8,13 @@ Leading up to the Swedish election a few weeks ago, the usual storm of polls was
 
 [MansMeg-SwedishPolls]: https://github.com/MansMeg/SwedishPolls
 [MansMeg-Ada]: https://github.com/MansMeg/Ada
-[bottenada]: http://bottenada.se
-[pollofpolls]: http://pollofpolls.se
+[bottenada]: https://bottenada.se
+[pollofpolls]: https://pollofpolls.se
 
 I like playing with data, and the availability of these swedish opinion polls, as well as [data from election manifestos][Manifesto] and [the Swedish Parliament itself][riksdagen] inspired me to play a bit with the data.
 
 [Manifesto]: https://manifesto-project.wzb.eu
-[riksdagen]: http://data.riksdagen.se
+[riksdagen]: https://data.riksdagen.se
 
 ## A poll of polls
 
