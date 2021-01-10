@@ -14,10 +14,10 @@ So, how would this publishing model work, anyway?
 
 [^1]: Now defunct, as of 2017-01-12.
 
-[gh]: http://github.com
-[gh-p]: http://pages.github.com
-[jekyll]: http://jekyllrb.com
-[mojombo]: http://tom.preston-werner.com
+[gh]: https://github.com
+[gh-p]: https://pages.github.com
+[jekyll]: https://jekyllrb.com
+[mojombo]: https://tom.preston-werner.com
 [m8ck]: https://github.com/emory/m8ck.us.to
 [jekyll-sites]: https://github.com/mojombo/jekyll/wiki/Sites
 [gitready-pulls]: https://github.com/gitready/gitready/pulls?direction=desc&page=1&sort=created&state=closed
@@ -51,9 +51,9 @@ No system is ever perfect, and this publishing model is not without its flaws. F
 Another consequence of using Github is the inherently open-source nature of the publication. If anyone should be allowed to fork the project (and by extension, submit articles) the repository must be public. This means that anyone can duplicate code and/or text used in the publication. To mitigate this, private repositories can be used. Private repositories [also have public pages][priv-pub], but they have the drawback that forking (and therefore, submitting articles) is limited to organization members. Since organization teams can be restricted to only *pulling*, a model where a "Writers" team submits articles through pull requests is possible, but this would incur additional overhead for both writers (having to request membership in this team) and administrators (having to handle these requests). Nonetheless, it is a viable option.
 
 [md]: https://daringfireball.net/projects/markdown/
-[latex]: http://www.latex-project.org
-[gh-api]: http://developer.github.com/v3/
-[priv-pub]: http://stackoverflow.com/a/10929350/147845
+[latex]: https://www.latex-project.org
+[gh-api]: https://developer.github.com/v3/
+[priv-pub]: https://stackoverflow.com/a/10929350/147845
 
 ## Conclusion
 
