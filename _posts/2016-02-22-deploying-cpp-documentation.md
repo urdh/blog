@@ -30,9 +30,9 @@ Many modern languages come with simple and sensible standards or conventions for
 [rustdoc]: https://doc.rust-lang.org/book/comments.html
 [docstrings]: https://www.python.org/dev/peps/pep-0257/
 
-Making the best of what's there, my most recent attempt at generating a somewhat modern and readable documentation for one of my C++ projects utilizes a combination of Doxygen and [Sphinx][^sphinx-note], with [breathe] to link the two[^cppformat-fn]. This gives enough flexibility when it comes to the output, and the entire documentation can be written in a writer-friendly format such as reStructuredText (or in this case Common Markdown, with the help of [recommonmark]).
+Making the best of what's there, my most recent attempt at generating a somewhat modern and readable documentation for one of my C++ projects utilizes a combination of Doxygen and [Sphinx][sphinx][^sphinx-note], with [breathe] to link the two[^cppformat-fn]. This gives enough flexibility when it comes to the output, and the entire documentation can be written in a writer-friendly format such as reStructuredText (or in this case Common Markdown, with the help of [recommonmark]).
 
-[Sphinx]: https://www.sphinx-doc.org
+[sphinx]: https://www.sphinx-doc.org
 [breathe]: https://github.com/michaeljones/breathe
 [recommonmark]: https://github.com/rtfd/recommonmark
 
