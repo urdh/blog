@@ -22,6 +22,7 @@ So, how would this publishing model work, anyway?
 [jekyll-sites]: https://github.com/mojombo/jekyll/wiki/Sites
 [gitready-pulls]: https://github.com/gitready/gitready/pulls?direction=desc&page=1&sort=created&state=closed
 [wtfjs]: https://web.archive.org/web/20160503132616/wtfjs.com
+
 ## The setup
 
 Setting up a reviewed online publication on Github is not difficult. There are only a few concepts that have to be adapted to the Github workflow, and those fall into place  easily.

@@ -6,7 +6,6 @@ linkchat: Adding [custom entry types to biblatex-chicago](<self>) turned out to 
 
 Universities often have requirements on the citation style used in reports, theses and the like; and Chalmers is no exception. While most of the requirements made by Chalmers are well approximated by the [biblatex-chicago][chicago] package (specifically its author-date style), some entry types are just not defined. One of those entry types is `@legislation`.
 
-
 Luckily, the format is simple and you can easily replicate the behaviour using the generic `@misc` entry type:
 
 ~~~ bibtex
