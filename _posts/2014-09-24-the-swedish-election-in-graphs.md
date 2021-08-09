@@ -63,6 +63,7 @@ Conversely, Keynesian policies used to be associated with the left (or rather, t
 Generally, all gaphs quite clearly show differences within the two major coalitions (some differences are significant and in issues which are major issues for some parties), which is interesting.
 
 [^lowe]: Lowe, W., Benoit, K., Mikhaylov, S. and Laver, M. 2011. [*”Scaling Policy Preferences from Coded Political Texts.”*][lowe] Legislative Studies Quarterly 36 (1): 123–155.
+
 [lowe]: https://doi.org/10.1111/j.1939-9162.2010.00006.x
 
 [logrile-img]: /assets/the-swedish-election-in-graphs/logrile.png
