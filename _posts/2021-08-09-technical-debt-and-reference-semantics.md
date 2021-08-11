@@ -87,15 +87,15 @@ This is further exacerbated by the fact that a function can _save_ a non-const c
 
 The issues described above seem pretty significant, but there are ways to mitigate them. For an existing codebase, the changes will be disruptive and likely difficult to verify if the code is poorly tested, but in the long term they will take care of _some_ of the problems.
 
-The most glaring issue of the setup is the reference semantics of the base. This causes not only doubts regarding ownership and lifetime, but is also the root cause of most of the const correctness issues. Replacing this behavior with value semantics by implementing a sensible copy assignment operator would solve _most_ of the issues. The move constructor and move assignment operator would do the correct thing if defaulted, but the copy construct has to be deleted:
+The most glaring issue of the setup is the reference semantics of the base. This causes not only doubts regarding ownership and lifetime, but is also the root cause of most of the const correctness issues. Replacing this behavior with value semantics by implementing a sensible copy assignment operator would solve _most_ of the issues. The move constructor and move assignment operator would do the correct thing if defaulted, but the copy constructor has to be deleted:
 
 ```c++
 template <typename T>
 class vector
 {
 public:
-  vector(const vector&) = delete;
   vector(vector&&) = default;
+  vector(const vector&) = delete;
 
   vector& operator=(vector&&) = default;
   vector& operator=(const vector& other)
