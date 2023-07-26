@@ -14,8 +14,8 @@ layout: default
 	{{ content }}
 	<footer>
 		<ul id="social">
-			<li><a id="social-tw" href="https://twitter.com/share?url={{ site.url }}{{ page.url | replace:'index.html',''}}" onclick="javascript:window.open(this.href,
-  '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><i class="fa fa-fw fa-twitter fa-3x"></i><span>Share on Twitter</span></a></li>
+			<li><a id="social-pb" href="https://pinboard.in/add?url={{ site.url }}{{ page.url | replace:'index.html',''}}&title={{ page.title | uri_escape }}" onclick="javascript:window.open(this.href,
+  '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><i class="fa fa-fw fa-thumb-tack fa-3x"></i><span>Save to Pinboard</span></a></li>
 			<li><a id="social-rd" href="https://reddit.com/submit/?url={{ site.url }}{{ page.url | replace:'index.html',''}}" onclick="javascript:window.open(this.href,
 	'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><i class="fa fa-fw fa-reddit fa-3x"></i><span>Share on Reddit</span></a></li>
 			<li><a id="social-hn" href="https://news.ycombinator.com/submitlink?u={{ site.url }}{{ page.url | replace:'index.html',''}}" onclick="javascript:window.open(this.href,
