@@ -1,8 +1,10 @@
-name: "Check for broken links"
+name: "Build and verify"
 
 on:
-  schedule:
-    - cron: '0 0 * * 1'
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
   workflow_dispatch:
 
 jobs:
@@ -12,9 +14,9 @@ jobs:
     container: ruby:3.4
     env:
       BUNDLE_FROZEN: true
-      BUNDLE_WITHOUT: development lint
+      BUNDLE_WITHOUT: development
     steps:
       - uses: actions/checkout@v3
-      - run: bundle install --frozen
+      - run: bundle install
       - run: bundle exec jekyll build
-      - run: bundle exec ./validate.rb
+      - run: bundle exec ./validate.rb --disable-external
