@@ -113,7 +113,8 @@ puts "\n"
 htmlproofer = HTMLProofer.check_directory("./_site", {:ssl_verifyhost => 2,
                                                       :only_4xx => true,
                                                       :url_ignore => [/doi.org/],
-                                                      :parallel => { :in_processes => 3} }).run
+                                                      :parallel => { :in_processes => 3},
+                                                      :disable_external => ARGV.include?('--disable-external')}).run
 
 puts "\n"
 puts "#{passed} files pass validation, #{failed} files failed."

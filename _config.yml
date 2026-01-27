@@ -26,11 +26,9 @@ defaults:
       author: 'Simon Sigurdhsson'
 
 exclude:
-  - .travis.yml
   - validate.rb
   - LICENSE.md
   - README.md
-  - CNAME
   - Gemfile
   - Gemfile.lock
   - vendor/
