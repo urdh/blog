@@ -19,6 +19,11 @@ group :development, :test do
   gem 'w3c_validators', '>= 1.3.3'
 end
 
+group :development, :lint do
+  gem 'base64'
+  gem 'rubocop'
+end
+
 group :development do
   gem 'ruby-lsp'
 end
