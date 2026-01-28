@@ -15,7 +15,6 @@ group :development, :test do
   gem 'html5_validator'
   gem 'html-proofer', '>= 3.17.0'
   gem 'nokogiri', '>= 1.10.5'
-  gem 'open_uri_redirections'
   gem 'w3c_validators', '>= 1.3.3'
 end
 

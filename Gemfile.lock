@@ -149,7 +149,6 @@ GEM
       racc (~> 1.4)
     nokogiri (1.19.0-x86_64-linux-musl)
       racc (~> 1.4)
-    open_uri_redirections (0.2.1)
     parallel (1.27.0)
     parser (3.3.10.1)
       ast (~> 2.4.1)
@@ -267,7 +266,6 @@ DEPENDENCIES
   jekyll-sitemap (>= 1.4.0)
   kramdown-parser-gfm
   nokogiri (>= 1.10.5)
-  open_uri_redirections
   rouge
   rubocop
   ruby-lsp

@@ -6,7 +6,6 @@ require 'nokogiri'
 require 'html5_validator'
 require 'w3c_validators'
 require 'open-uri'
-require 'open_uri_redirections'
 require 'html-proofer'
 require 'colorize'
 
@@ -34,15 +33,15 @@ class XMLValidator < W3CValidators::Validator
                    W3CValidators::Results.new({ uri: nil, validity: true })
                  else
                    schema_uri = document.xpath('*/@xsi:schemaLocation').to_s.split[1]
-                   schema = Nokogiri::XML::Schema(open(schema_uri, allow_redirections: :safe).read) # rubocop:disable Security/Open
+                   schema = Nokogiri::XML::Schema(URI.open(schema_uri).read) # rubocop:disable Security/Open
                    errors = schema.validate(document)
                    r = W3CValidators::Results.new({ uri: nil, validity: errors.empty? })
                    errors.each { |msg| r.add_error({ message: msg.to_s }) if msg.error? }
                    r
                  end
-    rescue StandardError
+    rescue StandardError => e
       @results = W3CValidators::Results.new({ uri: nil, validity: false })
-      @results.add_error({ message: 'Nokogiri threw errors on input.' })
+      @results.add_error({ message: "Nokogiri threw errors on input: #{e}" })
     end
     @results
   end
@@ -66,14 +65,24 @@ class HtmlValidator < W3CValidators::Validator
   end
 end
 
-puts "Validating jekyll output in '_site/'..."
-puts "\n"
-failed = 0
-passed = 0
-skipped = 0
+# Use a custom html-proofer with less verbose output
+class Reporter < HTMLProofer::Reporter
+  def report
+    failures.each_with_object([]) do |(_, failures), _|
+      failures.each do |failure|
+        path_str = blank?(failure.path) ? '' : failure.path.to_s
+        line_str = failure.line.nil? ? '' : ":#{failure.line}"
+        path_and_line = "#{path_str}#{line_str}"
+        path_and_line = blank?(path_and_line) ? '' : "#{path_and_line}: "
+        status_str = failure.status.nil? ? '' : " (status code #{failure.status})"
+        puts "#{path_and_line}#{failure.description}#{status_str}".colorize(:red)
+      end
+    end
+  end
+end
 
 # Iterate over all the site files and validate them as appropriate.
-Dir.glob('_site/**/*') do |file|
+validation = Dir.glob('_site/**/*').flat_map do |file|
   # Skip ignored files and all directories
   next if File.directory?(file)
   next if IGNORED_FILES.include? file
@@ -91,32 +100,38 @@ Dir.glob('_site/**/*') do |file|
               when '.css'
                 W3CValidators::CSSValidator.new
               else
-                skipped += 1
                 puts file.colorize(:light_black)
                 next
               end
 
   # ... and then run the validation.
-  if validator.validate_file(file).errors.empty?
+  errors = validator.validate_file(file).errors
+  if errors.empty?
     puts file.colorize(:green)
-    passed += 1
   else
     puts file.colorize(:red)
-    failed += 1
   end
+
+  errors.map { |error| { path: file, line: error.line || 0, description: error.message } }
+end.compact
+
+unless validation.empty?
+  puts "\n\n"
+  validation.each do |failure|
+    puts "#{failure[:path]}:#{failure[:line]}: #{failure[:description]}".colorize(:red)
+  end
+  puts "\n"
+  puts "Validation found #{validation.length} failures!"
 end
 
-puts "Running html-proofer in content in '_site/'..."
+# Also run html-proofer on all generated html
 puts "\n"
-html_proofer = HTMLProofer.check_directory('./_site', { ssl_verifyhost: 2,
-                                                        only_4xx: true,
-                                                        url_ignore: [/doi.org/],
-                                                        parallel: { in_processes: 3 },
-                                                        disable_external: ARGV.include?('--disable-external') }).run
+proofer = HTMLProofer.check_directory('./_site', { ssl_verifyhost: 2,
+                                                   only_4xx: true,
+                                                   url_ignore: [/doi.org/],
+                                                   parallel: { in_processes: 3 },
+                                                   disable_external: ARGV.include?('--disable-external') })
+proofer.reporter = Reporter.new
+proofer.run
 
-puts "\n"
-puts "#{passed} files pass validation, #{failed} files failed."
-puts 'The html-proofer test failed!' unless html_proofer
-
-failed += 1 unless html_proofer
-exit failed
+exit(1) unless validation.empty?
