@@ -1,11 +1,13 @@
-# _plugins/url_encode.rb
+# frozen_string_literal: true
+
 require 'liquid'
 require 'uri'
 
 module Jekyll
+  # Helper for URI-encoding a string according to the HTML5 specification
   module EncodeURIComponent
     def encode_uri_component(content)
-      URI.escape(content, Regexp.new("[^#{URI::PATTERN::UNRESERVED}]"))
+      URI.encode_www_form_component(content)
     end
   end
 end

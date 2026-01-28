@@ -1,0 +1,23 @@
+name: "Build and verify"
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    name: Build and verify
+    container: ruby:3.4
+    env:
+      BUNDLE_FROZEN: true
+      BUNDLE_WITHOUT: development
+    steps:
+      - uses: actions/checkout@v3
+      - run: bundle install
+      - run: bundle exec rubocop
+      - run: bundle exec jekyll build
+      - run: bundle exec ./validate.rb --disable-external
