@@ -1,8 +1,6 @@
-name: "Build and verify"
+name: "Test & validate"
 
 on:
-  push:
-    branches: [master]
   pull_request:
     branches: [master]
   workflow_dispatch:
@@ -10,7 +8,7 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    name: Build and verify
+    name: Validate & lint
     container: ruby:3.4
     env:
       BUNDLE_FROZEN: true
