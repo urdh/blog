@@ -14,7 +14,7 @@ jobs:
       BUNDLE_FROZEN: true
       BUNDLE_WITHOUT: development
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v6
       - run: bundle install
       - run: bundle exec rubocop
       - run: bundle exec jekyll build
