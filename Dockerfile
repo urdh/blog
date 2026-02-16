@@ -1,4 +1,4 @@
-FROM ruby:3.4 AS builder
+FROM ruby:4.0 AS builder
 
 RUN mkdir -p /workspace
 WORKDIR /workspace
