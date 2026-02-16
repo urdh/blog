@@ -83,4 +83,4 @@ From this table, you can estimate how often the opposition acts in unity, how of
 Playing with data is fun, and there's probably much more you could do with both Manifesto data and the parliament API, but this is it for now.
 
 [gist-vote]: https://gist.github.com/urdh/5d61d4d66b257c96718b
-[gist-html]: https://bit.ly/voteringar1314
+[gist-html]: https://html-preview.github.io/?url=https://gist.githubusercontent.com/urdh/8cab776419f2ee0ac883/raw/357f82b8f995b2c04dd2344692cd8e38daea642e/voteringar.html
