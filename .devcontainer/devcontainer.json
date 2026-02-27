@@ -3,7 +3,9 @@
     "customizations": {
         "vscode": {
             "extensions": [
-                "Shopify.ruby-lsp"
+                "Shopify.ruby-lsp",
+                "bierner.markdown-footnotes",
+                "streetsidesoftware.code-spell-checker"
             ]
         }
     }

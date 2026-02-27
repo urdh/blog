@@ -32,3 +32,5 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - vendor/
+  - .vscode/
+  - .devcontainer/
