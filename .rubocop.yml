@@ -4,3 +4,7 @@ AllCops:
 
 Metrics:
   Enabled: false
+
+Style/OneClassPerFile:
+  Exclude:
+    - './validate.rb'
