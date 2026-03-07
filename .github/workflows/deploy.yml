@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Deploy to Sliplane.io
     steps:
-      - uses: docker/metadata-action@v5
+      - uses: docker/metadata-action@v6
         with:
           images: ghcr.io/${{ github.repository }}
           tags: type=edge
