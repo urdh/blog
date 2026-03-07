@@ -27,7 +27,7 @@ jobs:
       DOCKER_CACHE: type=registry,ref=ghcr.io/${{ github.repository }}:cache
       PUSH_CACHE: ${{ github.actor != 'dependabot[bot]' }}
     steps:
-      - uses: docker/login-action@v3
+      - uses: docker/login-action@v4
         with:
           registry: ghcr.io
           username: ${{ github.repository_owner }}
